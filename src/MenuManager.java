@@ -3,31 +3,31 @@ import java.util.Scanner;
 public class MenuManager {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		int num = 5;
+		StudentManager studentManager = new StudentManager(input);
+		int num = -1;
 
-		while (num != 6) {		
+		while (num != 5) {		
 			System.out.println("*** Student Management System Menu ***");
 			System.out.println("1. Add Student");
 			System.out.println("2. Delete Student");
 			System.out.println("3. Edit Student");
 			System.out.println("4. View Student");
-			System.out.println("5. Show a menu");
-			System.out.println("6. Exit");
-			System.out.println("Select one number between 1 - 6:");
+			System.out.println("5. Exit");
+			System.out.println("Select one number between 1 - 5:");
 			num = input.nextInt();
 		    if(num == 1) {
-		    	addStudent();
+		    	studentManager.addStudent();
 		    }
 		    	
 		    else if(num == 2) {
-		   	deleteStudent();
+		    	studentManager.deleteStudent();
 		    }
 		   	
 		   	else if(num == 3) {
-			   	editStudent();
+		   		studentManager.editStudent();
 		    }
 		   	else if(num == 4) {
-			   	viewStudent();
+		   		studentManager.viewStudent();
 		   	}
 		   	else {
 		   		continue;
